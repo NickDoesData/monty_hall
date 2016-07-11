@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_results(results, choice):
+def plot_hist(results):
 
     fig, ax = plt.subplots()
     bins = np.arange(min(results),max(results),.03)
@@ -9,7 +9,7 @@ def plot_results(results, choice):
     plt.hist(results,bins,color=(31./255, 119./255, 180./255),linewidth=.4)  # plt.hist passes it's arguments to np.histogram
     #plt.xlabel('probability of winning car')
     
-    title = 'distribution of winning percentages when %s doors' % choice
+    title = 'chart title' 
     plt.title(title)  
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
